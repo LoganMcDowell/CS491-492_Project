@@ -114,6 +114,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         StartGame sg = new StartGame();
         sg.setVisible(true);
+        dispose();
         //setVisible(false);
     }//GEN-LAST:event_Start_ButtonActionPerformed
 
@@ -121,6 +122,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Decks d = new Decks();
         d.setVisible(true);
+        dispose();
         //setVisible(false);
     }//GEN-LAST:event_Deck_ButtonActionPerformed
 
@@ -128,6 +130,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Options op = new Options();
         op.setVisible(true);
+        dispose();
         //setVisible(false);
     }//GEN-LAST:event_Options_ButtonActionPerformed
 
@@ -135,6 +138,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Help h = new Help();
         h.setVisible(true);
+        dispose();
         //setVisible(false);
     }//GEN-LAST:event_Help_ButtonActionPerformed
 

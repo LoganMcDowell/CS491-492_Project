@@ -28,48 +28,55 @@ public class Field extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        DrawCard_Button = new javax.swing.JButton();
-        ReturntoMain_Button = new javax.swing.JButton();
+        Draw_Button = new javax.swing.JButton();
+        Return_Button = new javax.swing.JButton();
         EndTurn_Button = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        Background = new javax.swing.JLabel();
+        Player_Hand = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        AI_Hand = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DrawCard_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DrawCard_Button.setText("Draw Card");
-        DrawCard_Button.addActionListener(new java.awt.event.ActionListener() {
+        Draw_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Draw_Button.setText("Draw Card");
+        Draw_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DrawCard_ButtonActionPerformed(evt);
+                Draw_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(DrawCard_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, 20));
+        jPanel1.add(Draw_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, 20));
 
-        ReturntoMain_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        ReturntoMain_Button.setText("Return to Main");
-        jPanel1.add(ReturntoMain_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, -1, 20));
+        Return_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Return_Button.setText("Return");
+        Return_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Return_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, -1, 20));
 
         EndTurn_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EndTurn_Button.setText("End Turn");
         jPanel1.add(EndTurn_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 100, 20));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        Player_Hand.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 336, 520, 100));
+        jPanel1.add(Player_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 336, 520, 100));
 
+        jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        AI_Hand.setViewportView(jTextArea2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, -1));
+        jPanel1.add(AI_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,9 +94,16 @@ public class Field extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DrawCard_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrawCard_ButtonActionPerformed
+    private void Draw_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Draw_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DrawCard_ButtonActionPerformed
+    }//GEN-LAST:event_Draw_ButtonActionPerformed
+
+    private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
+        // TODO add your handling code here:
+        MainMenu mm = new MainMenu();
+        mm.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Return_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,13 +141,13 @@ public class Field extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DrawCard_Button;
+    private javax.swing.JScrollPane AI_Hand;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton Draw_Button;
     private javax.swing.JButton EndTurn_Button;
-    private javax.swing.JButton ReturntoMain_Button;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane Player_Hand;
+    private javax.swing.JButton Return_Button;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
