@@ -91,7 +91,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         Menu.add(Exit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/MainMenu_Background.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/MainMenu.jpg"))); // NOI18N
         Menu.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
