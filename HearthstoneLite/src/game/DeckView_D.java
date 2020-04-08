@@ -60,6 +60,8 @@ public class DeckView_D extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 320, 50));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/DeckView.png"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

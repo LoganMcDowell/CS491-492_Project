@@ -72,6 +72,8 @@ public class Cards extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Cards.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

@@ -62,6 +62,8 @@ public class Field extends javax.swing.JFrame {
         EndTurn_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EndTurn_Button.setText("End Turn");
         jPanel1.add(EndTurn_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 100, 20));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Field.jpg"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         jTextArea1.setEditable(false);

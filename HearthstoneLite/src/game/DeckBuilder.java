@@ -70,6 +70,8 @@ public class DeckBuilder extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/DeckBuilder.png"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

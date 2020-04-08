@@ -47,8 +47,10 @@ public class Options extends javax.swing.JFrame {
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        Title.setForeground(new java.awt.Color(255, 255, 255));
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Title.setText("Options");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 260, 50));
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 260, 50));
 
         Resolution_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Resolution_Button.setText("Resolution");
@@ -70,6 +72,8 @@ public class Options extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 320, 50));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Options.jpg"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
