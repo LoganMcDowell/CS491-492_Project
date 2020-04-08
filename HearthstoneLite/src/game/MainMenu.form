@@ -142,7 +142,7 @@
         <Component class="javax.swing.JLabel" name="Background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/game/MainMenu_Background.jpg"/>
+              <Image iconType="3" name="/game/images/MainMenu_Background.jpg"/>
             </Property>
           </Properties>
           <Constraints>
