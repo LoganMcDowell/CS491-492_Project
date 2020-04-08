@@ -34,12 +34,12 @@ public class Decks extends javax.swing.JFrame {
         Edit_Button = new javax.swing.JButton();
         Delete_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        Background = new javax.swing.JLabel();
         Deck_Tab = new javax.swing.JTabbedPane();
         Custom_Tab = new javax.swing.JScrollPane();
         Custom_List = new javax.swing.JList<>();
         Default_Tab = new javax.swing.JScrollPane();
         Default_List = new javax.swing.JList<>();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,9 +91,6 @@ public class Decks extends javax.swing.JFrame {
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Decks.png"))); // NOI18N
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
-
         Custom_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Custom_List.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
         Custom_List.setModel(new javax.swing.AbstractListModel<String>() {
@@ -120,6 +117,9 @@ public class Decks extends javax.swing.JFrame {
 
         jPanel1.add(Deck_Tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 270, 360));
 
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Decks.png"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,6 +144,8 @@ public class Decks extends javax.swing.JFrame {
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
