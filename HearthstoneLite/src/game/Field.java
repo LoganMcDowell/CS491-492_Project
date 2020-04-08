@@ -31,11 +31,11 @@ public class Field extends javax.swing.JFrame {
         Draw_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
         EndTurn_Button = new javax.swing.JButton();
-        Background = new javax.swing.JLabel();
         Player_Hand = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         AI_Hand = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,9 +63,6 @@ public class Field extends javax.swing.JFrame {
         EndTurn_Button.setText("End Turn");
         jPanel1.add(EndTurn_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 100, 20));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Field.jpg"))); // NOI18N
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
-
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -79,6 +76,9 @@ public class Field extends javax.swing.JFrame {
         AI_Hand.setViewportView(jTextArea2);
 
         jPanel1.add(AI_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, -1));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Field.jpg"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

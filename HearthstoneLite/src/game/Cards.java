@@ -33,9 +33,9 @@ public class Cards extends javax.swing.JFrame {
         Remove_Button = new javax.swing.JButton();
         Add_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,14 +73,14 @@ public class Cards extends javax.swing.JFrame {
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 20));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Cards.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
-
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane1.setViewportView(jList1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 350, 330));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Cards.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,6 +104,8 @@ public class Cards extends javax.swing.JFrame {
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
