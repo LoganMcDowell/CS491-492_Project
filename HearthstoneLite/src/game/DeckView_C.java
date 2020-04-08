@@ -9,12 +9,12 @@ package game;
  *
  * @author lmcdo
  */
-public class Help extends javax.swing.JFrame {
+public class DeckView_C extends javax.swing.JFrame {
 
     /**
-     * Creates new form Help
+     * Creates new form DeckView
      */
-    public Help() {
+    public DeckView_C() {
         initComponents();
     }
 
@@ -29,10 +29,11 @@ public class Help extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
-        Instructions_Button = new javax.swing.JButton();
+        Card_Button = new javax.swing.JButton();
+        Name_Field = new javax.swing.JTextField();
+        Save_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        Guide_Button = new javax.swing.JButton();
-        Background = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,32 +41,42 @@ public class Help extends javax.swing.JFrame {
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Help");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 260, 50));
+        Title.setForeground(new java.awt.Color(255, 255, 255));
+        Title.setText("Create Deck");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 260, 50));
 
-        Instructions_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Instructions_Button.setText("Instructions");
-        Instructions_Button.addActionListener(new java.awt.event.ActionListener() {
+        Card_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Card_Button.setText("Select Card");
+        Card_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Instructions_ButtonActionPerformed(evt);
+                Card_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Instructions_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+        jPanel1.add(Card_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+
+        Name_Field.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Name_Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Name_Field.setText("Name the Deck");
+        jPanel1.add(Name_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 60));
+
+        Save_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Save_Button.setText("Save");
+        Save_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Save_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Save_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 320, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Return_Button.setText("Return to Main");
+        Return_Button.setText("Cancel");
         Return_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 320, 50));
-
-        Guide_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Guide_Button.setText("Guide");
-        jPanel1.add(Guide_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,9 +94,16 @@ public class Help extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Instructions_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Instructions_ButtonActionPerformed
+    private void Card_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Instructions_ButtonActionPerformed
+        Cards c = new Cards();
+        c.setVisible(true);
+    }//GEN-LAST:event_Card_ButtonActionPerformed
+
+    private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
@@ -109,30 +127,32 @@ public class Help extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Help().setVisible(true);
+                new DeckView_C().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Background;
-    private javax.swing.JButton Guide_Button;
-    private javax.swing.JButton Instructions_Button;
+    private javax.swing.JButton Card_Button;
+    private javax.swing.JTextField Name_Field;
     private javax.swing.JButton Return_Button;
+    private javax.swing.JButton Save_Button;
     private javax.swing.JLabel Title;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

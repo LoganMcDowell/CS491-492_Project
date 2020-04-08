@@ -9,12 +9,12 @@ package game;
  *
  * @author lmcdo
  */
-public class Help extends javax.swing.JFrame {
+public class DeckView_D extends javax.swing.JFrame {
 
     /**
-     * Creates new form Help
+     * Creates new form DeckView
      */
-    public Help() {
+    public DeckView_D() {
         initComponents();
     }
 
@@ -29,9 +29,8 @@ public class Help extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
-        Instructions_Button = new javax.swing.JButton();
+        Delete_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        Guide_Button = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,52 +39,47 @@ public class Help extends javax.swing.JFrame {
 
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Help");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 260, 50));
+        Title.setForeground(new java.awt.Color(255, 255, 255));
+        Title.setText("Delete Deck?");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 260, 50));
 
-        Instructions_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Instructions_Button.setText("Instructions");
-        Instructions_Button.addActionListener(new java.awt.event.ActionListener() {
+        Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Delete_Button.setText("DELETE");
+        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Instructions_ButtonActionPerformed(evt);
+                Delete_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Instructions_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+        jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 320, 60));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Return_Button.setText("Return to Main");
+        Return_Button.setText("Cancel");
         Return_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 320, 50));
-
-        Guide_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Guide_Button.setText("Guide");
-        jPanel1.add(Guide_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 320, 50));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Instructions_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Instructions_ButtonActionPerformed
+    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Instructions_ButtonActionPerformed
+        dispose();
+    }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
@@ -109,28 +103,30 @@ public class Help extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Help().setVisible(true);
+                new DeckView_D().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton Guide_Button;
-    private javax.swing.JButton Instructions_Button;
+    private javax.swing.JButton Delete_Button;
     private javax.swing.JButton Return_Button;
     private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;

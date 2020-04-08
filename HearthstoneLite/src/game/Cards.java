@@ -52,19 +52,19 @@ public class Cards extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 320, 60));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 110, 40));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("Remove");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, 110, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("Add");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 110, -1));
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("Return");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 40));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

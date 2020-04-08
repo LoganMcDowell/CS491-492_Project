@@ -28,43 +28,95 @@ public class Decks extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
+        Text_1 = new javax.swing.JLabel();
+        Create_Button = new javax.swing.JButton();
+        Edit_Button = new javax.swing.JButton();
+        Delete_Button = new javax.swing.JButton();
+        Return_Button = new javax.swing.JButton();
+        Background = new javax.swing.JLabel();
+        Deck_Tab = new javax.swing.JTabbedPane();
+        Custom_Tab = new javax.swing.JScrollPane();
+        Custom_List = new javax.swing.JList<>();
+        Default_Tab = new javax.swing.JScrollPane();
+        Default_List = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("       Deck ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 220, 69));
+        Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        Title.setForeground(new java.awt.Color(255, 255, 255));
+        Title.setText("       Deck ");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 220, 69));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("Select Deck");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Text_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Text_1.setForeground(new java.awt.Color(51, 51, 51));
+        Text_1.setText("Select a Deck");
+        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 170, 40));
+
+        Create_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Create_Button.setText("Create New");
+        Create_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Create_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 320, 60));
+        jPanel1.add(Create_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 140, 50));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("Delete");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
+        Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Edit_Button.setText("Edit ");
+        Edit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Edit_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Edit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 140, 40));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("Edit ");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
+        Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Delete_Button.setText("Delete");
+        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 140, 40));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setText("Return");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Return_Button.setText("Return");
+        Return_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Return_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+
+        Custom_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Custom_List.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        Custom_List.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Deck 1", "Deck 2", "Deck 3", "Deck 4", "Deck 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        Custom_List.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        Custom_Tab.setViewportView(Custom_List);
+
+        Deck_Tab.addTab("tab1", Custom_Tab);
+
+        Default_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Default_List.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        Default_List.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Default 1", "Default 2", "Default 3", "Default 4", "Default 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        Default_List.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        Default_Tab.setViewportView(Default_List);
+
+        Deck_Tab.addTab("tab2", Default_Tab);
+
+        jPanel1.add(Deck_Tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 270, 360));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,9 +134,29 @@ public class Decks extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        DeckView_C dc = new DeckView_C();
+        dc.setVisible(true);
+    }//GEN-LAST:event_Create_ButtonActionPerformed
+
+    private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_Return_ButtonActionPerformed
+
+    private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
+        // TODO add your handling code here:
+        DeckView_E de = new DeckView_E();
+        selectedItem = Custom_List.getSelectedValue();
+        de.setVisible(true);
+    }//GEN-LAST:event_Edit_ButtonActionPerformed
+
+    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
+        // TODO add your handling code here:
+        DeckView_D dd = new DeckView_D();
+        dd.setVisible(true);
+    }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,14 +192,20 @@ public class Decks extends javax.swing.JFrame {
             }
         });
     }
-
+    public static String selectedItem;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton Create_Button;
+    private javax.swing.JList<String> Custom_List;
+    private javax.swing.JScrollPane Custom_Tab;
+    private javax.swing.JTabbedPane Deck_Tab;
+    private javax.swing.JList<String> Default_List;
+    private javax.swing.JScrollPane Default_Tab;
+    private javax.swing.JButton Delete_Button;
+    private javax.swing.JButton Edit_Button;
+    private javax.swing.JButton Return_Button;
+    private javax.swing.JLabel Text_1;
+    private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

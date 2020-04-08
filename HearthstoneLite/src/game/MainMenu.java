@@ -34,7 +34,7 @@ public class MainMenu extends javax.swing.JFrame {
         Options_Button = new javax.swing.JButton();
         Help_Button = new javax.swing.JButton();
         Exit_Button = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,26 +48,51 @@ public class MainMenu extends javax.swing.JFrame {
 
         Start_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Start_Button.setText("START");
+        Start_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Start_ButtonActionPerformed(evt);
+            }
+        });
         Menu.add(Start_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 320, 60));
 
         Deck_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Deck_Button.setText("Deck Builder");
+        Deck_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Deck_ButtonActionPerformed(evt);
+            }
+        });
         Menu.add(Deck_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
 
         Options_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Options_Button.setText("Options");
+        Options_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Options_ButtonActionPerformed(evt);
+            }
+        });
         Menu.add(Options_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
 
         Help_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Help_Button.setText("Help");
+        Help_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Help_ButtonActionPerformed(evt);
+            }
+        });
         Menu.add(Help_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
 
         Exit_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Exit_Button.setText("EXIT");
+        Exit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Exit_ButtonActionPerformed(evt);
+            }
+        });
         Menu.add(Exit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/MainMenu_Background.jpg"))); // NOI18N
-        Menu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/MainMenu_Background.jpg"))); // NOI18N
+        Menu.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +109,39 @@ public class MainMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Start_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Start_ButtonActionPerformed
+        // TODO add your handling code here:
+        StartGame sg = new StartGame();
+        sg.setVisible(true);
+        //setVisible(false);
+    }//GEN-LAST:event_Start_ButtonActionPerformed
+
+    private void Deck_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Deck_ButtonActionPerformed
+        // TODO add your handling code here:
+        Decks d = new Decks();
+        d.setVisible(true);
+        //setVisible(false);
+    }//GEN-LAST:event_Deck_ButtonActionPerformed
+
+    private void Options_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Options_ButtonActionPerformed
+        // TODO add your handling code here:
+        Options op = new Options();
+        op.setVisible(true);
+        //setVisible(false);
+    }//GEN-LAST:event_Options_ButtonActionPerformed
+
+    private void Help_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Help_ButtonActionPerformed
+        // TODO add your handling code here:
+        Help h = new Help();
+        h.setVisible(true);
+        //setVisible(false);
+    }//GEN-LAST:event_Help_ButtonActionPerformed
+
+    private void Exit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit_ButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_Exit_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +179,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Background;
     private javax.swing.JButton Deck_Button;
     private javax.swing.JButton Exit_Button;
     private javax.swing.JButton Help_Button;
@@ -128,6 +187,5 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton Options_Button;
     private javax.swing.JButton Start_Button;
     private javax.swing.JLabel Title;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
