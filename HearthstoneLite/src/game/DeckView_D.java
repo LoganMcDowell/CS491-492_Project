@@ -80,11 +80,15 @@ public class DeckView_D extends javax.swing.JFrame {
 
     private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 

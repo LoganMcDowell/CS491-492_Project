@@ -92,10 +92,15 @@ public class DeckBuilder extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckView_C dc = new DeckView_C();
+        dc.setVisible(true);
+        dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        MainMenu mm = new MainMenu();
+        mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 

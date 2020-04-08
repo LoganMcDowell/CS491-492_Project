@@ -104,11 +104,15 @@ public class DeckView_C extends javax.swing.JFrame {
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        DeckBuilder db = new DeckBuilder();
+        db.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
