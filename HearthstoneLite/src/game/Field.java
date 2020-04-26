@@ -79,34 +79,36 @@ public class Field extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 60, 80));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 110));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 100));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 60, 110));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 60, 100));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 60, 110));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 60, 100));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 60, 110));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 60, 100));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 60, 110));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 60, 100));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 60, 110));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 60, 100));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 60, 80));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 60, 80));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 60, 80));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 60, 80));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 60, 80));
 
         jTextArea1.setEditable(false);
