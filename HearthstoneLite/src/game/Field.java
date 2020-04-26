@@ -31,6 +31,7 @@ public class Field extends javax.swing.JFrame {
         Draw_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
         EndTurn_Button = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         Player_Hand = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         AI_Hand = new javax.swing.JScrollPane();
@@ -48,7 +49,7 @@ public class Field extends javax.swing.JFrame {
                 Draw_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Draw_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, 20));
+        jPanel1.add(Draw_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, -1, 20));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Return_Button.setText("Return");
@@ -57,11 +58,12 @@ public class Field extends javax.swing.JFrame {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, -1, 20));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, -1, 20));
 
         EndTurn_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EndTurn_Button.setText("End Turn");
-        jPanel1.add(EndTurn_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 100, 20));
+        jPanel1.add(EndTurn_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 100, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 70, 80));
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
@@ -149,6 +151,7 @@ public class Field extends javax.swing.JFrame {
     private javax.swing.JButton EndTurn_Button;
     private javax.swing.JScrollPane Player_Hand;
     private javax.swing.JButton Return_Button;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
