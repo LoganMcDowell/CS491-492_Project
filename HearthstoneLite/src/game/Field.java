@@ -68,7 +68,7 @@ public class Field extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         Player_Hand.setViewportView(jTextArea1);
 
-        jPanel1.add(Player_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 336, 520, 100));
+        jPanel1.add(Player_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 520, 100));
 
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
