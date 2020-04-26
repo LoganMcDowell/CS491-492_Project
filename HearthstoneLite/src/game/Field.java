@@ -107,8 +107,6 @@ public class Field extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 60, 80));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Deck).PNG"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 60, 80));
 
         jTextArea1.setEditable(false);
