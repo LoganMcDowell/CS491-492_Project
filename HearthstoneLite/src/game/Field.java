@@ -94,7 +94,7 @@ public class Field extends javax.swing.JFrame {
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 60, 100));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Real(Card).PNG"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 60, 100));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 60, 100));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 60, 80));
