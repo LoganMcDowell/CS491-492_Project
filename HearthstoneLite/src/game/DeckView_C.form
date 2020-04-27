@@ -126,7 +126,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/game/images/DeckView.png"/>
+              <Image iconType="3" name="/game/images/FantasyTabletop_1.jpg"/>
             </Property>
           </Properties>
           <Constraints>

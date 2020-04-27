@@ -125,8 +125,8 @@ public class Field extends javax.swing.JFrame {
 
         jPanel1.add(AI_Hand, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Field.jpg"))); // NOI18N
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/table.jpg"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 90, 520, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

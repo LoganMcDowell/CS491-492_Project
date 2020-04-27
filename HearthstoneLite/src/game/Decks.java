@@ -117,7 +117,7 @@ public class Decks extends javax.swing.JFrame {
 
         jPanel1.add(Deck_Tab, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 270, 360));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Decks.png"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_1.jpg"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

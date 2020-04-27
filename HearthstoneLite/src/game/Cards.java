@@ -33,10 +33,15 @@ public class Cards extends javax.swing.JFrame {
         Remove_Button = new javax.swing.JButton();
         Add_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
+        Card_Icon_6 = new javax.swing.JLabel();
+        Card_Icon_5 = new javax.swing.JLabel();
+        Card_Icon_4 = new javax.swing.JLabel();
+        Card_Icon_3 = new javax.swing.JLabel();
+        Card_Icon_2 = new javax.swing.JLabel();
+        Card_Icon_1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +49,6 @@ public class Cards extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("    Cards");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 200, 50));
 
@@ -74,17 +78,32 @@ public class Cards extends javax.swing.JFrame {
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 20));
 
+        Card_Icon_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, 80));
+
+        Card_Icon_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, 80));
+
+        Card_Icon_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, 80));
+
+        Card_Icon_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, 80));
+
+        Card_Icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, 80));
+
+        Card_Icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, 80));
+
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jScrollPane1.setViewportView(jList1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 350, 330));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/Cards.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
-
-        jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 60, 40));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_2.jpg"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,12 +169,17 @@ public class Cards extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Add_Button;
+    private javax.swing.JLabel Background;
+    private javax.swing.JLabel Card_Icon_1;
+    private javax.swing.JLabel Card_Icon_2;
+    private javax.swing.JLabel Card_Icon_3;
+    private javax.swing.JLabel Card_Icon_4;
+    private javax.swing.JLabel Card_Icon_5;
+    private javax.swing.JLabel Card_Icon_6;
     private javax.swing.JButton Inspect_Button;
     private javax.swing.JButton Remove_Button;
     private javax.swing.JButton Return_Button;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
