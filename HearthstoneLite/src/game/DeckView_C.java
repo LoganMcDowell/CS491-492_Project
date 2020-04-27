@@ -100,19 +100,20 @@ public class DeckView_C extends javax.swing.JFrame {
         // TODO add your handling code here:
         Cards c = new Cards();
         c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_Card_ButtonActionPerformed
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
-        DeckBuilder db = new DeckBuilder();
-        db.setVisible(true);
+        Decks d = new Decks();
+        d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        DeckBuilder db = new DeckBuilder();
-        db.setVisible(true);
+        Decks d = new Decks();
+        d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 

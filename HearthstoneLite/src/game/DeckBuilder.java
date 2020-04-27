@@ -56,10 +56,20 @@ public class DeckBuilder extends javax.swing.JFrame {
 
         Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Delete_Button.setText("Delete Deck");
+        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_ButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
 
         Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Edit_Button.setText("Edit Deck");
+        Edit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Edit_ButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(Edit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -103,6 +113,20 @@ public class DeckBuilder extends javax.swing.JFrame {
         mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
+
+    private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
+        // TODO add your handling code here:
+        DeckView_E de = new DeckView_E();
+        de.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Edit_ButtonActionPerformed
+
+    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
+        // TODO add your handling code here:
+        DeckView_D dd = new DeckView_D();
+        dd.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
