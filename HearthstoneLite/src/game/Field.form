@@ -276,12 +276,12 @@
         <Component class="javax.swing.JLabel" name="Background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/game/images/Field.jpg"/>
+              <Image iconType="3" name="/game/images/table.jpg"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="520" height="430"/>
+              <AbsoluteConstraints x="2" y="90" width="520" height="250"/>
             </Constraint>
           </Constraints>
         </Component>

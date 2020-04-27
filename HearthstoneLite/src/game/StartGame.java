@@ -76,7 +76,7 @@ public class StartGame extends javax.swing.JFrame {
         Select_AI_Button.setText("Select Deck Of AI");
         jPanel1.add(Select_AI_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/StartGame.png"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyBackground_1.jpg"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
