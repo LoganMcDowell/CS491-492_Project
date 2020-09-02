@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package game.SCREENS;
 
 /**
  *
  * @author lmcdo
  */
-public class StartGame extends javax.swing.JFrame {
+public class SCREEN_StartGame extends javax.swing.JFrame {
 
     /**
      * Creates new form StartGame
      */
-    public StartGame() {
+    public SCREEN_StartGame() {
         initComponents();
     }
 
@@ -101,13 +101,15 @@ public class StartGame extends javax.swing.JFrame {
 
     private void Play_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Play_ButtonActionPerformed
         // TODO add your handling code here:
-        Field f = new Field();
+        SCREEN_Field f = new SCREEN_Field();
         f.setVisible(true);
         dispose();
     }//GEN-LAST:event_Play_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
+        SCREEN_MainMenu mm = new SCREEN_MainMenu();
+        mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
@@ -128,20 +130,21 @@ public class StartGame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StartGame().setVisible(true);
+                new SCREEN_StartGame().setVisible(true);
             }
         });
     }

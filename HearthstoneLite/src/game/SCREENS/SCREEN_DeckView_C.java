@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package game.SCREENS;
 
 /**
  *
  * @author lmcdo
  */
-public class DeckView_C extends javax.swing.JFrame {
+public class SCREEN_DeckView_C extends javax.swing.JFrame {
 
     /**
      * Creates new form DeckView
      */
-    public DeckView_C() {
+    public SCREEN_DeckView_C() {
         initComponents();
     }
 
@@ -33,6 +33,8 @@ public class DeckView_C extends javax.swing.JFrame {
         Name_Field = new javax.swing.JTextField();
         Save_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,8 +44,8 @@ public class DeckView_C extends javax.swing.JFrame {
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         Title.setForeground(new java.awt.Color(255, 255, 255));
-        Title.setText("Create Deck");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 260, 50));
+        Title.setText("Decks");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 50));
 
         Card_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Card_Button.setText("Select Card");
@@ -52,12 +54,12 @@ public class DeckView_C extends javax.swing.JFrame {
                 Card_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Card_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+        jPanel1.add(Card_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 130, 50));
 
         Name_Field.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name_Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Name_Field.setText("Name the Deck");
-        jPanel1.add(Name_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 60));
+        jPanel1.add(Name_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 320, 40));
 
         Save_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Save_Button.setText("Save");
@@ -66,7 +68,7 @@ public class DeckView_C extends javax.swing.JFrame {
                 Save_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Save_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 320, 50));
+        jPanel1.add(Save_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 110, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Return_Button.setText("Cancel");
@@ -75,7 +77,23 @@ public class DeckView_C extends javax.swing.JFrame {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 100, 50));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setColumnSelectionAllowed(false);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 360, 330));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_1.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
@@ -98,21 +116,21 @@ public class DeckView_C extends javax.swing.JFrame {
 
     private void Card_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card_ButtonActionPerformed
         // TODO add your handling code here:
-        Cards c = new Cards();
+        SCREEN_Cards c = new SCREEN_Cards();
         c.setVisible(true);
         dispose();
     }//GEN-LAST:event_Card_ButtonActionPerformed
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
-        Decks d = new Decks();
+        SCREEN_Decks d = new SCREEN_Decks();
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        Decks d = new Decks();
+        SCREEN_Decks d = new SCREEN_Decks();
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
@@ -134,21 +152,23 @@ public class DeckView_C extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeckView_C().setVisible(true);
+                new SCREEN_DeckView_C().setVisible(true);
             }
         });
     }
@@ -161,5 +181,7 @@ public class DeckView_C extends javax.swing.JFrame {
     private javax.swing.JLabel Title;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

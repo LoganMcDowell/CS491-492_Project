@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package game.SCREENS;
 
 /**
  *
  * @author lmcdo
  */
-public class DeckView_D extends javax.swing.JFrame {
+public class SCREEN_Options extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeckView
+     * Creates new form Options
      */
-    public DeckView_D() {
+    public SCREEN_Options() {
         initComponents();
     }
 
@@ -28,8 +28,10 @@ public class DeckView_D extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Text_1 = new javax.swing.JLabel();
         Title = new javax.swing.JLabel();
-        Delete_Button = new javax.swing.JButton();
+        Resolution_Button = new javax.swing.JButton();
+        jSlider1 = new javax.swing.JSlider();
         Return_Button = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
@@ -37,58 +39,67 @@ public class DeckView_D extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Text_1.setBackground(new java.awt.Color(0, 0, 0));
+        Text_1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Text_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Text_1.setText("Volume");
+        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 260, 50));
+
         Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         Title.setForeground(new java.awt.Color(255, 255, 255));
-        Title.setText("Delete Deck?");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 260, 50));
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title.setText("Options");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 260, 50));
 
-        Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        Delete_Button.setText("DELETE");
-        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
+        Resolution_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Resolution_Button.setText("Resolution");
+        Resolution_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Delete_ButtonActionPerformed(evt);
+                Resolution_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 320, 60));
+        jPanel1.add(Resolution_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+
+        jSlider1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 320, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Return_Button.setText("Cancel");
+        Return_Button.setText("Return to Main");
         Return_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 320, 50));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 320, 50));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_3.jpg"))); // NOI18N
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 260));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 420));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
+    private void Resolution_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Resolution_ButtonActionPerformed
         // TODO add your handling code here:
-        Decks d = new Decks();
-        d.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_Delete_ButtonActionPerformed
+    }//GEN-LAST:event_Resolution_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        Decks d = new Decks();
-        d.setVisible(true);;
+        SCREEN_MainMenu mm = new SCREEN_MainMenu();
+        mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
@@ -109,32 +120,32 @@ public class DeckView_D extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeckView_D.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeckView_D().setVisible(true);
+                new SCREEN_Options().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton Delete_Button;
+    private javax.swing.JButton Resolution_Button;
     private javax.swing.JButton Return_Button;
+    private javax.swing.JLabel Text_1;
     private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 }

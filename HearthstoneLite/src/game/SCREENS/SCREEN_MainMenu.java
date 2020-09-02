@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game;
+package game.SCREENS;
 
 /**
  *
  * @author lmcdo
  */
-public class MainMenu extends javax.swing.JFrame {
+public class SCREEN_MainMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
      */
-    public MainMenu() {
+    public SCREEN_MainMenu() {
         initComponents();
     }
 
@@ -26,6 +26,7 @@ public class MainMenu extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         Menu = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
@@ -92,6 +93,12 @@ public class MainMenu extends javax.swing.JFrame {
         Menu.add(Exit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyBackground_1.jpg"))); // NOI18N
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${horizontalAlignment}"), Background, org.jdesktop.beansbinding.BeanProperty.create("horizontalAlignment"));
+        bindingGroup.addBinding(binding);
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${verticalAlignment}"), Background, org.jdesktop.beansbinding.BeanProperty.create("verticalAlignment"));
+        bindingGroup.addBinding(binding);
+
         Menu.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,7 +106,7 @@ public class MainMenu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 516, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -107,12 +114,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Start_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Start_ButtonActionPerformed
         // TODO add your handling code here:
-        StartGame sg = new StartGame();
+        SCREEN_StartGame sg = new SCREEN_StartGame();
         sg.setVisible(true);
         dispose();
         //setVisible(false);
@@ -120,7 +129,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void Deck_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Deck_ButtonActionPerformed
         // TODO add your handling code here:
-        Decks d = new Decks();
+        SCREEN_Decks d = new SCREEN_Decks();
         d.setVisible(true);
         dispose();
         //setVisible(false);
@@ -128,7 +137,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void Options_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Options_ButtonActionPerformed
         // TODO add your handling code here:
-        Options op = new Options();
+        SCREEN_Options op = new SCREEN_Options();
         op.setVisible(true);
         dispose();
         //setVisible(false);
@@ -136,7 +145,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void Help_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Help_ButtonActionPerformed
         // TODO add your handling code here:
-        Help h = new Help();
+        SCREEN_Help h = new SCREEN_Help();
         h.setVisible(true);
         dispose();
         //setVisible(false);
@@ -164,20 +173,21 @@ public class MainMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new SCREEN_MainMenu().setVisible(true);
             }
         });
     }
@@ -191,5 +201,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton Options_Button;
     private javax.swing.JButton Start_Button;
     private javax.swing.JLabel Title;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
