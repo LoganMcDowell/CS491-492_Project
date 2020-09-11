@@ -20,7 +20,11 @@ public class Database {
         mm.setVisible(true);
         
         ArrayList players;
-        
+        Deck def1;
+        Deck def2;
+        Deck def3;
+        Deck def4;
+        Deck def5;
     }
     
 }

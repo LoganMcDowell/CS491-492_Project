@@ -20,8 +20,5 @@ public class Field {
         player_1.setSide(1);
         player_2.setSide(2);
         
-    }
-    
-    
-    
+    } 
 }

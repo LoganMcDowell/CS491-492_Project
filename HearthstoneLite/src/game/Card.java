@@ -16,9 +16,12 @@ public class Card {
     private String name;
     private int attack;
     private int defense;
+    //private int cost; <<- For playing onto the Field
     /* To be used for GUI card images
     private File image;
     */
+    
+    //Constructor
     public Card(int ID,String name,int attack,int defense) {
         this.ID = ID;
         this.name = name;
@@ -26,6 +29,9 @@ public class Card {
         this.defense = defense;
     }
     
+    /*
+        Function calls for specific information about the object
+    */
     public int getID(){
         return this.ID;
     }
@@ -42,5 +48,15 @@ public class Card {
     public String getCard(Card card){    
         
         return "ID: "+card.ID+"\nName: "+card.name+"\nAttack: "+card.attack+"\nDefense: "+card.defense;
+    }
+    
+    public class CardBuild{
+        Deck tempDeck;
+        File storage;
+        int[] def1;
+        
+        public CardBuild(File folder){
+            
+        }
     }
 }
