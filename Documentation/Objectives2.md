@@ -5,7 +5,8 @@
 ## Schedule
 ### Project Assignment - Due 9/13
 ###### Email decision by 9/12 so it can be discussed
-### Sprint #1: 9/13 - 9/19
+### Meeting #0: 9/13
+### Sprint #1: 9/13 - 9/19 (Email questions ASAP)
 ### Meeting #1: 9/19 or 9/20
 ### Phase I - Due 9/27
 ###### Management Plan
