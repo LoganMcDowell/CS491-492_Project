@@ -49,7 +49,8 @@ public class Card {
         
         return "ID: "+card.ID+"\nName: "+card.name+"\nAttack: "+card.attack+"\nDefense: "+card.defense;
     }
-    
+    // addCard(Card card) function
+    // Deck 
     public class CardBuild{
         Deck tempDeck;
         File storage;
