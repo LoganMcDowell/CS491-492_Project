@@ -9,19 +9,26 @@ import java.util.ArrayList;
  *
  * @author lmcdo
  */
-public class ActiveCard {
+public class ActiveCards {
     
     private ArrayList active;
     private int owner;
     private int size = active.size();
     
-    public ActiveCard(int ID, ArrayList cards){
+    //New Card Data ->ActiveCard object
+    // protected id,name,cost,attack,defense
+    
+    //Maybe change to Hand Subclass?
+    public ActiveCards(int ID, ArrayList cards){
         this.owner = ID;
         this.active = cards;
         this.size = cards.size();
     }
-    
+    // Card: Wolf 2-2
+    // ->Card -> ActiveCard Wolf 2-2
+    // 1 damage -> ActiveCard Wolf 2-1 (public ActiveCard takeDamage(ActiveCard card)
     public Card AddActive(int ID, Card card){
+        //
         this.owner = ID;
         active.add(card);
         this.size = this.active.size();

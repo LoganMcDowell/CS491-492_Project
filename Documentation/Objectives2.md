@@ -8,7 +8,7 @@
 ### Meeting #0: 9/13
 ### Sprint #1: 9/13 - 9/19 (Email questions ASAP)
 ### Meeting #1: 9/19 or 9/20
-### Phase I - Due 9/27
+### Phase I - Due 9/27 -> Due 10/5
 ###### Management Plan
 ### Phase II - Due 11/9
 ###### Working Project
@@ -25,3 +25,10 @@
 ##### Variable creation (HP, Mana), etc
 ### Gameplay
 ##### Field, Card gameplay
+#
+# Timeline
+### Progress Update 9/23 DUE 9/28
+##### Card Work - Justin
+##### Deck work - Picard
+##### Class Integration,etc - Logan
+#

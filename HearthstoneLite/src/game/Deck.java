@@ -41,4 +41,7 @@ public class Deck {
         return "ID: "+deck.ID+"\nName: "+deck.name+"\nSize: "+deck.getSize();
         
     }
+    
+    // addCard(Card card) && removeCard(int i) function
+    //Deck is in list[Card] format
 }

@@ -189,6 +189,7 @@ public class SCREEN_Field extends javax.swing.JFrame {
                 new SCREEN_Field().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
