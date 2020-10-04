@@ -5,6 +5,8 @@
  */
 package game.SCREENS;
 
+import game.Database;
+
 /**
  *
  * @author lmcdo

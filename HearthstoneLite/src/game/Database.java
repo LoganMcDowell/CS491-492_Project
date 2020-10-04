@@ -11,7 +11,7 @@ import java.io.*;
  * @author Logan McDowell
  */
 public class Database {
-
+    public static Deck defdeck1;
     public static void main(String []args) {
         Card card1 = new Card(1,"Test Card",0,1,5);
         System.out.println(card1.getCard(card1));

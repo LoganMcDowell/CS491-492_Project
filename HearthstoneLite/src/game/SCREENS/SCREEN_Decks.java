@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package game.SCREENS;
-
+import game.*;
 /**
  *
  * @author lmcdo
@@ -199,6 +199,8 @@ public class SCREEN_Decks extends javax.swing.JFrame {
                 new SCREEN_Decks().setVisible(true);
             }
         });
+        
+        Deck def1 = Database.defdeck1;
     }
     public static String selectedItem;
     // Variables declaration - do not modify//GEN-BEGIN:variables
