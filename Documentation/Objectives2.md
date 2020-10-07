@@ -42,6 +42,14 @@
 ##### Database Creation - Logan (Complete, awaiting storage elements)
 ##### Project-Lead-Notes: Justin did not show up nor did he email anything for the meeting. Picard had to be instructed on how to specifically write code for his work. I made the Management Plan myself as I wanted the two of them to focus on their program work.
 #
-### Update 8/5
+### Update 10/5
 ##### Submission of Phase 1: Management Plan
 ##### No update from team members, awaiting reply from multiple emails.
+#
+### Update 10/7 - Work Due 10/12
+##### Phase 2 Start
+##### Justin - Card object interaction on Card screen, creation of a min of 15 actual cards with data. Card data sent to DeckView_C for corresponding Deck.
+##### Picard - Deck screen update, buttons to phase out Deckview_E and Deckview_D for Deckview_C only. Implement GameUtil functions across the other classes and then remove that class. Functions may also go to Database class if needed.
+##### Logan - Debugging and Oversight.
+##### Additional work besides those listed is appreciated.
+#
