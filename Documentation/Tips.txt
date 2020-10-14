@@ -1,0 +1,12 @@
+Field Screen:
+	Change main background to look like a rustic/weathered tabletop
+	Add HP and Mana icons around where the player and AI would have their icons (in the middle of the screen between the hand-screen and the playing field)
+	Create 5 cards from the defaultcard image, place 5 cards face-up in the player hand (you can duplicate some of those cards in the hand, but we still need 5 unique cards)
+	Create Deck image (stack of cards) on the righthand side of the player hand area, add one for the AI in its hand area on either side.
+
+Cards Screen:
+	Show the 5 unique cards within the box
+
+SRS Section 4/5:
+	Simplify and personalize descriptions. Describe it as our Hearthstone Lite program and how the interactions would be for OUR program, not for some default textbook program. Feel free to write it in Native Language in an informal (as if you were talking to a friend) format that is simple and easy to understand for anyone, including someone who has no knowledge of software.
+
