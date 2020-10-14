@@ -48,9 +48,9 @@ public class Card {
         return this.defense;
     }
     
-    public String getCard(Card card){    
+    public String getCard(){    
         
-        return "ID: "+card.ID+"\nName: "+card.name+"\nAttack: "+card.attack+"\nDefense: "+card.defense;
+        return "------------\n"+"ID: "+this.ID+"\nName: "+this.name+"\nCost: "+this.cost+"\nAttack: "+this.attack+"\nDefense: "+this.defense+"\n------------";
     }
     
     /*public Card[] getBuild(){

@@ -3,6 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/*
+ACTION
+0: default
+1: Start
+2: Decks
+3: Options
+4: Quit
+*/
 package game.SCREENS;
 
 import game.Database;
@@ -12,7 +21,11 @@ import game.Database;
  * @author lmcdo
  */
 public class SCREEN_MainMenu extends javax.swing.JFrame {
-
+    
+    //Menu choice thing
+    private int action = 0;
+    public boolean response = false;
+    
     /**
      * Creates new form MainMenu
      */
@@ -131,8 +144,15 @@ public class SCREEN_MainMenu extends javax.swing.JFrame {
 
     private void Deck_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Deck_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
-        d.setVisible(true);
+        
+        //SCREEN_Decks d = new SCREEN_Decks();
+        //d.setVisible(true);
+        
+        action = 2;
+        while(response==false){
+            //wait
+        }
+        response = false;
         dispose();
         //setVisible(false);
     }//GEN-LAST:event_Deck_ButtonActionPerformed
@@ -158,6 +178,13 @@ public class SCREEN_MainMenu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_Exit_ButtonActionPerformed
 
+    //Sends Menu Choice to Database
+    public int getAction(){
+        return action;
+    }
+    public void setAction(int set){
+        action = set;
+    }
     /**
      * @param args the command line arguments
      */

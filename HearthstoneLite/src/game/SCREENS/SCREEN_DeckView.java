@@ -9,12 +9,12 @@ package game.SCREENS;
  *
  * @author lmcdo
  */
-public class SCREEN_DeckView_C extends javax.swing.JFrame {
+public class SCREEN_DeckView extends javax.swing.JFrame {
 
     /**
      * Creates new form DeckView
      */
-    public SCREEN_DeckView_C() {
+    public SCREEN_DeckView() {
         initComponents();
     }
 
@@ -90,7 +90,6 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setColumnSelectionAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 360, 330));
@@ -123,15 +122,15 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
-        d.setVisible(true);
+        //SCREEN_Decks d = new SCREEN_Decks();
+        //d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
-        d.setVisible(true);
+        //SCREEN_Decks d = new SCREEN_Decks();
+        //d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
@@ -152,14 +151,18 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_DeckView_C.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -168,7 +171,7 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_DeckView_C().setVisible(true);
+                new SCREEN_DeckView().setVisible(true);
             }
         });
     }

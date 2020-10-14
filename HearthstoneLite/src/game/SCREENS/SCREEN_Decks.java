@@ -3,6 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/*
+2 formats possible for communication
+Either use stop and wait for info to pass between
+Or set class data info such as Database.defdeck1 = df1;
+*/
 package game.SCREENS;
 import game.*;
 /**
@@ -11,11 +17,14 @@ import game.*;
  */
 public class SCREEN_Decks extends javax.swing.JFrame {
 
+    private static Deck df1,df2,df3,df4,df5,cs1,cs2,cs3,cs4,cs5;
     /**
      * Creates new form Decks
      */
-    public SCREEN_Decks() {
+    public SCREEN_Decks(Deck d1, Deck d2, Deck d3, Deck d4, Deck d5, Deck c1, Deck c2, Deck c3, Deck c4, Deck c5) {
         initComponents();
+        this.df1 = d1;this.df2 = d2;this.df3 = d3;this.df4 = d4;this.df5 = d5;
+        this.cs1 = c1;this.cs2 = c2;this.cs3 = c3;this.cs4 = c4; this.cs5 = c5;
     }
 
     /**
@@ -138,7 +147,7 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_DeckView_C dc = new SCREEN_DeckView_C();
+        SCREEN_DeckView dc = new SCREEN_DeckView();
         dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed
@@ -152,16 +161,18 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
     private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
         // TODO add your handling code here:
-        DeckView_E de = new DeckView_E();
+        //selectedDeck.edit()
         selectedItem = Custom_List.getSelectedValue();
-        de.setVisible(true);
+        SCREEN_DeckView dc = new SCREEN_DeckView();
+        dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_Edit_ButtonActionPerformed
 
     private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
         // TODO add your handling code here:
-        DeckView_D dd = new DeckView_D();
-        dd.setVisible(true);
+        //selectedDeck.remove()
+        SCREEN_DeckView dc = new SCREEN_DeckView();
+        dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_Delete_ButtonActionPerformed
 
@@ -193,14 +204,13 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_Decks().setVisible(true);
+                new SCREEN_Decks(df1, df2, df3, df4, df5, cs1, cs2, cs3, cs4, cs5).setVisible(true);
             }
         });
-        
-        Deck def1 = Database.defdeck1;
     }
     public static String selectedItem;
     // Variables declaration - do not modify//GEN-BEGIN:variables

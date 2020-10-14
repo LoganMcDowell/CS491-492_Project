@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game.SCREENS;
+package OLD_pack;
+
+import game.SCREENS.SCREEN_DeckView;
+import game.SCREENS.SCREEN_MainMenu;
 
 /**
  *
  * @author lmcdo
  */
-public class DeckView_E extends javax.swing.JFrame {
+public class SCREEN_DeckBuilder extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeckView
+     * Creates new form DeckBuilder
      */
-    public DeckView_E() {
+    public SCREEN_DeckBuilder() {
         initComponents();
     }
 
@@ -29,61 +32,60 @@ public class DeckView_E extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
-        Card_Button = new javax.swing.JButton();
-        Save_Button = new javax.swing.JButton();
+        Create_Button = new javax.swing.JButton();
+        Delete_Button = new javax.swing.JButton();
+        Edit_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        Name_Field = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Title.setBackground(new java.awt.Color(0, 0, 0));
-        Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Title.setForeground(new java.awt.Color(255, 255, 255));
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Edit Deck");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 260, 50));
+        Title.setText("  Deck Builder");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 260, 60));
 
-        Card_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Card_Button.setText("Select Card");
-        Card_Button.addActionListener(new java.awt.event.ActionListener() {
+        Create_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Create_Button.setText("Create Deck");
+        Create_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card_ButtonActionPerformed(evt);
+                Create_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Card_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
+        jPanel1.add(Create_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 320, 60));
 
-        Save_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Save_Button.setText("Save");
-        Save_Button.addActionListener(new java.awt.event.ActionListener() {
+        Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Delete_Button.setText("Delete Deck");
+        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Save_ButtonActionPerformed(evt);
+                Delete_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Save_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 320, 50));
+        jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
+
+        Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Edit_Button.setText("Edit Deck");
+        Edit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Edit_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Edit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Return_Button.setText("Cancel");
+        Return_Button.setText("Return to Main Menu");
         Return_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 50));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
 
-        Name_Field.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Name_Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Name_Field.setText("Name the Deck");
-        jPanel1.add(Name_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 60));
-
-        jLabel3.setText(item);
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_1.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/DeckBuilder.png"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,26 +103,33 @@ public class DeckView_E extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Card_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card_ButtonActionPerformed
+    private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Cards c = new SCREEN_Cards();
-        c.setVisible(true);
+        SCREEN_DeckView dc = new SCREEN_DeckView();
+        dc.setVisible(true);
         dispose();
-    }//GEN-LAST:event_Card_ButtonActionPerformed
+    }//GEN-LAST:event_Create_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
-        d.setVisible(true);
+        SCREEN_MainMenu mm = new SCREEN_MainMenu();
+        mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
-    private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
+    private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
-        d.setVisible(true);
+        DeckView_E de = new DeckView_E();
+        de.setVisible(true);
         dispose();
-    }//GEN-LAST:event_Save_ButtonActionPerformed
+    }//GEN-LAST:event_Edit_ButtonActionPerformed
+
+    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
+        // TODO add your handling code here:
+        DeckView_D dd = new DeckView_D();
+        dd.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,35 +148,32 @@ public class DeckView_E extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeckView_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeckView_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeckView_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeckView_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeckView_E().setVisible(true);
+                new SCREEN_DeckBuilder().setVisible(true);
             }
         });
     }
-    private static String item = SCREEN_Decks.selectedItem;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Card_Button;
-    private javax.swing.JTextField Name_Field;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton Create_Button;
+    private javax.swing.JButton Delete_Button;
+    private javax.swing.JButton Edit_Button;
     private javax.swing.JButton Return_Button;
-    private javax.swing.JButton Save_Button;
     private javax.swing.JLabel Title;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
