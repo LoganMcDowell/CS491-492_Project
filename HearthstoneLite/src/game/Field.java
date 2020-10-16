@@ -22,9 +22,3 @@ public class Field {
         
     } 
 }
-
-//Needs main
-//Takes Player info(hp,chosenDeck)
-//Sets chosenDeck to Stack and shuffles
-//Pops Cards from DeckStack into Hand
-//Import/Export Cards from Hand into ActiveCards

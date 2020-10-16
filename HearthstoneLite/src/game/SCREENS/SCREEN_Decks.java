@@ -4,7 +4,15 @@
  * and open the template in the editor.
  */
 package game.SCREENS;
-import game.*;
+
+import game.Database;
+import game.Deck;
+import java.util.ArrayList;
+import javax.swing.AbstractListModel;
+import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
 /**
  *
  * @author lmcdo
@@ -14,8 +22,18 @@ public class SCREEN_Decks extends javax.swing.JFrame {
     /**
      * Creates new form Decks
      */
-    public SCREEN_Decks() {
+    
+    private ArrayList<Deck>deckList=null;
+    private ArrayList<Deck>customDeckList=null;
+    
+    private int customSelectedIndex=-1;
+    
+    public SCREEN_Decks(ArrayList<Deck>deckList,ArrayList<Deck>customDeckList) {
+        
+        this.deckList=deckList;
+        this.customDeckList=customDeckList;
         initComponents();
+        customizeInitializedComponents();
     }
 
     /**
@@ -53,7 +71,7 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         Text_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Text_1.setForeground(new java.awt.Color(51, 51, 51));
         Text_1.setText("Select a Deck");
-        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 170, 40));
+        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, 40));
 
         Create_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Create_Button.setText("Create New");
@@ -138,7 +156,7 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_DeckView_C dc = new SCREEN_DeckView_C();
+        SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
         dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed
@@ -151,18 +169,31 @@ public class SCREEN_Decks extends javax.swing.JFrame {
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
     private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
-        // TODO add your handling code here:
-        DeckView_E de = new DeckView_E();
-        selectedItem = Custom_List.getSelectedValue();
-        de.setVisible(true);
-        dispose();
+
+        
+        //check to ensure user has clicked an item in the list
+                if(customSelectedIndex>-1){
+                    SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
+                    dc.setVisible(true);
+                    dispose();
+                    
+                }else{
+                    JOptionPane.showMessageDialog(SCREEN_Decks.this, "You must select an item,or create one first");
+                }
+                    
     }//GEN-LAST:event_Edit_ButtonActionPerformed
 
     private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
-        // TODO add your handling code here:
-        DeckView_D dd = new DeckView_D();
-        dd.setVisible(true);
-        dispose();
+        
+        //check to ensure user has clicked an item in the list
+                if(customSelectedIndex>-1){
+                    SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
+                    dc.setVisible(true);
+                    dispose();
+                    
+                }else{
+                    JOptionPane.showMessageDialog(SCREEN_Decks.this, "You must select an item,or create one first");
+                }
     }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     /**
@@ -196,11 +227,9 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_Decks().setVisible(true);
+                new SCREEN_Decks(Database.getInstance().getDeckList(),Database.getInstance().getCustomDeckList()).setVisible(true);
             }
         });
-        
-        Deck def1 = Database.defdeck1;
     }
     public static String selectedItem;
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -218,4 +247,50 @@ public class SCREEN_Decks extends javax.swing.JFrame {
     private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    private void customizeInitializedComponents() {
+        
+        Default_List.setModel(new AbstractListModel<String>() {
+            
+            
+            @Override
+            public int getSize() {
+                return deckList.size();
+            }
+
+            @Override
+            public String getElementAt(int index) {
+                
+                 return deckList.get(index).getName();
+            }
+        });
+         Custom_List.setModel(new AbstractListModel<String>() {
+            
+            
+            @Override
+            public int getSize() {
+                return customDeckList.size();
+            }
+
+            @Override
+            public String getElementAt(int index) {
+                
+                 return customDeckList.get(index).getName();
+            }
+        });
+         
+         
+         //setListener on the customJlist
+         
+         Custom_List.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                customSelectedIndex=e.getFirstIndex();
+            }
+         });
+         
+         //end lister custom jlist
+        
+        
+    }
 }

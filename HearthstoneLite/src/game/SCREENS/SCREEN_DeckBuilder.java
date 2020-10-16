@@ -15,6 +15,7 @@ public class SCREEN_DeckBuilder extends javax.swing.JFrame {
      * Creates new form DeckBuilder
      */
     public SCREEN_DeckBuilder() {
+        
         initComponents();
     }
 
@@ -102,7 +103,7 @@ public class SCREEN_DeckBuilder extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_DeckView_C dc = new SCREEN_DeckView_C();
+        SCREEN_DeckView_C dc = new SCREEN_DeckView_C(-1);
         dc.setVisible(true);
         dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed

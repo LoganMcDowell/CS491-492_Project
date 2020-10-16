@@ -5,17 +5,31 @@
  */
 package game.SCREENS;
 
+import game.Database;
+import game.Deck;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author lmcdo
  */
 public class SCREEN_DeckView_C extends javax.swing.JFrame {
 
+    
+    private int deckArgumentReceived=-1;
     /**
      * Creates new form DeckView
      */
-    public SCREEN_DeckView_C() {
+    
+    //The screen view constructor receives the index of the deck that either needs to be 
+    //deleted or edited,if the user wants to create a new deck any negative integer value can 
+    //be passed
+    public SCREEN_DeckView_C(int CustomSelectedIndex) {
+        this.deckArgumentReceived=CustomSelectedIndex;
         initComponents();
+        //customImplementation
+        DeckViewCustomization();
     }
 
     /**
@@ -123,14 +137,14 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
+        SCREEN_Decks d = new SCREEN_Decks(Database.getInstance().getDeckList(), Database.getInstance().getCustomDeckList());
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
+        SCREEN_Decks d = new SCREEN_Decks(Database.getInstance().getDeckList(), Database.getInstance().getCustomDeckList());
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
@@ -168,7 +182,7 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_DeckView_C().setVisible(true);
+                new SCREEN_DeckView_C(-1).setVisible(true);
             }
         });
     }
@@ -184,4 +198,29 @@ public class SCREEN_DeckView_C extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void DeckViewCustomization() {
+        
+        if(deckArgumentReceived>-1)
+            Name_Field.setText(Database.getInstance().getCustomDeckList().get(deckArgumentReceived).getName());
+        Save_Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // we update the table with values the user entered in the table
+                jTable1.setModel(new javax.swing.table.DefaultTableModel(Database.getInstance().getCustomDeckListCardTitles(),
+                        new String[]{
+                            "Title1", "Title 2", "Title 3", "Title 4"
+                        }
+                ));
+                
+                
+           //when save button is clicked we handle namefield that gives us the name of custom deck
+            
+            Database.getInstance().getCustomDeckList().add(new Deck(Database.getInstance().getCustomDeckList().size(),  Name_Field.getText(), Database.getInstance().getCardSize(),Database.getInstance().getCardList()));
+
+            }
+            
+        });
+    }
 }

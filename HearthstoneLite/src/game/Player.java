@@ -15,19 +15,19 @@ public class Player {
     private String name;
     private ArrayList decks; //Custom Decks
     private int HP; //Default: 30?
-    private int Mana; //Default: 1(or 2), with increase by 1 each turn [FIELD MANAGES]
-    public Deck chosenDeck; //Needs function
+    private int Mana; //Default: 1(or 2), with increase by 1 each turn
+    private Deck chosenDeck;
     private int side;
     private boolean isUser = false;
     private boolean isDebug = false;
     
-    public Player (int ID,String name,int HP,int Mana){
+    public Player (int ID,String name,ArrayList decks,int HP,int Mana, Deck chosenDeck){
        this.ID = ID;
        this.name = name;
-       //this.decks = decks;
+       this.decks = decks;
        this.HP = HP;
        this.Mana = Mana;
-       //this.chosenDeck = chosenDeck;
+       this.chosenDeck = chosenDeck;
     }
     
     public void User(){
@@ -48,11 +48,4 @@ public class Player {
     protected void setSide(int side){
         this.side = side;
     }
-    
-    /*public Deck addDeck(deck)
-        this.decks.add(deck);
-    */
-    /*public Deck setDeck(deck)
-        this.chosenDeck = deck;
-    */
 }

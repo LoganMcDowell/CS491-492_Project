@@ -1,9 +1,12 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package game.SCREENS;
+
+import game.Database;
 
 /**
  *
@@ -110,14 +113,14 @@ public class DeckView_E extends javax.swing.JFrame {
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
+        SCREEN_Decks d = new SCREEN_Decks(Database.getInstance().getDeckList(),Database.getInstance().getCustomDeckList());
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
     private void Save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
+        SCREEN_Decks d = new SCREEN_Decks(Database.getInstance().getDeckList(),Database.getInstance().getCustomDeckList());
         d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Save_ButtonActionPerformed

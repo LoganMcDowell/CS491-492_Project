@@ -124,6 +124,7 @@ public class SCREEN_MainMenu extends javax.swing.JFrame {
     private void Start_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Start_ButtonActionPerformed
         // TODO add your handling code here:
         SCREEN_StartGame sg = new SCREEN_StartGame();
+        
         sg.setVisible(true);
         dispose();
         //setVisible(false);
@@ -131,7 +132,7 @@ public class SCREEN_MainMenu extends javax.swing.JFrame {
 
     private void Deck_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Deck_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Decks d = new SCREEN_Decks();
+        SCREEN_Decks d = new SCREEN_Decks(Database.getInstance().getDeckList(),Database.getInstance().getCustomDeckList());
         d.setVisible(true);
         dispose();
         //setVisible(false);
