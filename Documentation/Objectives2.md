@@ -53,3 +53,7 @@
 ##### Logan - Debugging and Oversight.
 ##### Additional work besides those listed is appreciated.
 #
+### Update 10/16 - Meeting with Picard
+##### Deckview and DeckBuilder screens need to require/pull in deck information to be displayed, selected, and changed.
+##### Utilize existing class functions for Card/Deck information access.
+##### Temporary Card Builder created in Database for Deck population, please use.
