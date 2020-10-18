@@ -71,7 +71,7 @@ public class Database{
                 SCREEN_StartGame sg = new SCREEN_StartGame();
                 break;
             case 2:
-                SCREEN_Decks dv = new SCREEN_Decks(dd1,dd2,dd3,dd4,dd5,cd1,cd2,cd3,cd4,cd5);
+                SCREEN_Decks db = new SCREEN_Decks(dd1,dd2,dd3,dd4,dd5,cd1,cd2,cd3,cd4,cd5);
                 break;
             case 3:
                 SCREEN_Options op = new SCREEN_Options();

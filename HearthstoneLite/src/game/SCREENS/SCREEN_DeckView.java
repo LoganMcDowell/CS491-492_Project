@@ -59,6 +59,11 @@ public class SCREEN_DeckView extends javax.swing.JFrame {
         Name_Field.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name_Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Name_Field.setText("Name the Deck");
+        Name_Field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Name_FieldActionPerformed(evt);
+            }
+        });
         jPanel1.add(Name_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 320, 40));
 
         Save_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -133,6 +138,10 @@ public class SCREEN_DeckView extends javax.swing.JFrame {
         //d.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
+
+    private void Name_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Name_FieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Name_FieldActionPerformed
 
     /**
      * @param args the command line arguments

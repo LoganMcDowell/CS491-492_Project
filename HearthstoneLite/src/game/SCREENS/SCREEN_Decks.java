@@ -24,6 +24,7 @@ public class SCREEN_Decks extends javax.swing.JFrame {
     public SCREEN_Decks(Deck d1, Deck d2, Deck d3, Deck d4, Deck d5, Deck c1, Deck c2, Deck c3, Deck c4, Deck c5) {
         initComponents();
         this.df1 = d1;this.df2 = d2;this.df3 = d3;this.df4 = d4;this.df5 = d5;
+        //add IF csi.equals(null)
         this.cs1 = c1;this.cs2 = c2;this.cs3 = c3;this.cs4 = c4; this.cs5 = c5;
     }
 
@@ -147,8 +148,8 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_DeckView dc = new SCREEN_DeckView();
-        dc.setVisible(true);
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
         dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed
 
@@ -163,16 +164,16 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         // TODO add your handling code here:
         //selectedDeck.edit()
         selectedItem = Custom_List.getSelectedValue();
-        SCREEN_DeckView dc = new SCREEN_DeckView();
-        dc.setVisible(true);
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
         dispose();
     }//GEN-LAST:event_Edit_ButtonActionPerformed
 
     private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
         // TODO add your handling code here:
         //selectedDeck.remove()
-        SCREEN_DeckView dc = new SCREEN_DeckView();
-        dc.setVisible(true);
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
         dispose();
     }//GEN-LAST:event_Delete_ButtonActionPerformed
 
