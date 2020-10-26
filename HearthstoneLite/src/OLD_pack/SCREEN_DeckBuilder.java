@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game.SCREENS;
+package OLD_pack;
+
+import game.SCREENS.SCREEN_DeckView;
+import game.SCREENS.SCREEN_MainMenu;
 
 /**
  *
  * @author lmcdo
  */
-public class SCREEN_StartGame extends javax.swing.JFrame {
+public class SCREEN_DeckBuilder extends javax.swing.JFrame {
 
-    SCREEN_Decks d;
     /**
-     * Creates new form StartGame
+     * Creates new form DeckBuilder
      */
-    public SCREEN_StartGame() {
+    public SCREEN_DeckBuilder() {
         initComponents();
     }
 
@@ -30,59 +32,59 @@ public class SCREEN_StartGame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
+        Create_Button = new javax.swing.JButton();
+        Delete_Button = new javax.swing.JButton();
+        Edit_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        Select_Player_Button = new javax.swing.JButton();
-        Play_Button = new javax.swing.JButton();
-        Select_AI_Button = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Title.setBackground(new java.awt.Color(0, 0, 0));
-        Title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Title.setForeground(new java.awt.Color(255, 255, 255));
-        Title.setText("Start Game");
-        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 260, 50));
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title.setText("  Deck Builder");
+        jPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 260, 60));
+
+        Create_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Create_Button.setText("Create Deck");
+        Create_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Create_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Create_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 320, 60));
+
+        Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Delete_Button.setText("Delete Deck");
+        Delete_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Delete_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
+
+        Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Edit_Button.setText("Edit Deck");
+        Edit_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Edit_ButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Edit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 320, 50));
 
         Return_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Return_Button.setText("Return");
+        Return_Button.setText("Return to Main Menu");
         Return_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Return_ButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 40));
+        jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 320, 50));
 
-        Select_Player_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Select_Player_Button.setText("Select Deck Of Player");
-        Select_Player_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Select_Player_ButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Select_Player_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 320, 60));
-
-        Play_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Play_Button.setText("Play");
-        Play_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Play_ButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Play_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 320, 50));
-
-        Select_AI_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Select_AI_Button.setText("Select Deck Of AI");
-        Select_AI_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Select_AI_ButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Select_AI_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 50));
-
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyBackground_1.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/DeckBuilder.png"))); // NOI18N
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -101,17 +103,12 @@ public class SCREEN_StartGame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Select_Player_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Select_Player_ButtonActionPerformed
-        d.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_Select_Player_ButtonActionPerformed
-
-    private void Play_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Play_ButtonActionPerformed
+    private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_Field f = new SCREEN_Field();
-        f.setVisible(true);
+        SCREEN_DeckView dc = new SCREEN_DeckView();
+        dc.setVisible(true);
         dispose();
-    }//GEN-LAST:event_Play_ButtonActionPerformed
+    }//GEN-LAST:event_Create_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
         // TODO add your handling code here:
@@ -120,10 +117,19 @@ public class SCREEN_StartGame extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
-    private void Select_AI_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Select_AI_ButtonActionPerformed
-        d.setVisible(true);
+    private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
+        // TODO add your handling code here:
+        //DeckView_E de = new DeckView_E();
+       // de.setVisible(true);
         dispose();
-    }//GEN-LAST:event_Select_AI_ButtonActionPerformed
+    }//GEN-LAST:event_Edit_ButtonActionPerformed
+
+    private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
+        // TODO add your handling code here:
+        //DeckView_D dd = new DeckView_D();
+        //dd.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Delete_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,13 +148,13 @@ public class SCREEN_StartGame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SCREEN_StartGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SCREEN_DeckBuilder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -156,17 +162,17 @@ public class SCREEN_StartGame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_StartGame().setVisible(true);
+                new SCREEN_DeckBuilder().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton Play_Button;
+    private javax.swing.JButton Create_Button;
+    private javax.swing.JButton Delete_Button;
+    private javax.swing.JButton Edit_Button;
     private javax.swing.JButton Return_Button;
-    private javax.swing.JButton Select_AI_Button;
-    private javax.swing.JButton Select_Player_Button;
     private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

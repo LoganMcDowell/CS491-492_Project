@@ -14,7 +14,7 @@ public class Deck {
     private int ID;
     private String name;
     //private int size;
-    private ArrayList listCards;
+    private ArrayList<Card> listCards;
     
     public Deck(int ID, String name, int size, ArrayList listCards){
         this.ID = ID;
@@ -32,13 +32,16 @@ public class Deck {
     public int getSize(){
         return this.listCards.size();
     }
-    public ArrayList getList(){
+    public ArrayList<Card> getList(){
         return this.listCards;
     }
     
-    public String getDeck(Deck deck){    
+    public String getDeck(){    
         
-        return "ID: "+deck.ID+"\nName: "+deck.name+"\nSize: "+deck.getSize();
+        return "ID: "+this.ID+"\nName: "+this.name+"\nSize: "+this.getSize();
         
     }
+    
+    // addCard(Card card) && removeCard(int i) function
+    //Deck is in list[Card] format
 }

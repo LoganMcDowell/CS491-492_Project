@@ -5,6 +5,7 @@
  */
 package game;
 import java.io.*;
+import java.util.Scanner;
 
 /**
  *
@@ -14,6 +15,7 @@ public class Card {
     
     private int ID;
     private String name;
+    private int cost;
     private int attack;
     private int defense;
     //private int cost; <<- For playing onto the Field
@@ -22,9 +24,10 @@ public class Card {
     */
     
     //Constructor
-    public Card(int ID,String name,int attack,int defense) {
+    public Card(int ID,String name,int cost,int attack,int defense) {
         this.ID = ID;
         this.name = name;
+        this.cost = cost;
         this.attack = attack;
         this.defense = defense;
     }
@@ -45,13 +48,19 @@ public class Card {
         return this.defense;
     }
     
-    public String getCard(Card card){    
+    public String getCard(){    
         
-        return "ID: "+card.ID+"\nName: "+card.name+"\nAttack: "+card.attack+"\nDefense: "+card.defense;
+        return "------------\n"+"ID: "+this.ID+"\nName: "+this.name+"\nCost: "+this.cost+"\nAttack: "+this.attack+"\nDefense: "+this.defense+"\n------------";
     }
-    // addCard(Card card) function
-    // Deck 
-    public class CardBuild{
+    
+    /*public Card[] getBuild(){
+        //Pulls text from cardData.txt to input Card vars
+        File cardStorage = new File("cardData.txt");
+        //add try - catch method
+        Scanner scan; //scan
+    }
+    
+    public class CardBuild{ -> MOVE TO DATABASE
         Deck tempDeck;
         File storage;
         int[] def1;
@@ -59,5 +68,8 @@ public class Card {
         public CardBuild(File folder){
             
         }
-    }
+    }*/
+    
+    //Make ActiveCard object that inherits Card
+    //Needs to be able to change variables outside of Card class (ie Field changes values)
 }

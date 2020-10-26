@@ -5,10 +5,7 @@
  */
 package game.SCREENS;
 
-import game.Card;
-import game.Database;
-import java.awt.Color;
-import java.util.ArrayList;
+import OLD_pack.SCREEN_DeckBuilder;
 
 /**
  *
@@ -19,11 +16,8 @@ public class SCREEN_Cards extends javax.swing.JFrame {
     /**
      * Creates new form Cards
      */
-    
-    private ArrayList<Card>cardList=new ArrayList<>();
     public SCREEN_Cards() {
         initComponents();
-        customizeLayout();
     }
 
     /**
@@ -36,18 +30,29 @@ public class SCREEN_Cards extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         Inspect_Button = new javax.swing.JButton();
         Remove_Button = new javax.swing.JButton();
         Add_Button = new javax.swing.JButton();
         Return_Button = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        Card_Icon_6 = new javax.swing.JLabel();
+        Card_Icon_5 = new javax.swing.JLabel();
+        Card_Icon_4 = new javax.swing.JLabel();
+        Card_Icon_3 = new javax.swing.JLabel();
+        Card_Icon_2 = new javax.swing.JLabel();
+        Card_Icon_1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jLabel2 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("    Cards");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 200, 50));
 
         Inspect_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Inspect_Button.setText("Inspect");
@@ -75,35 +80,44 @@ public class SCREEN_Cards extends javax.swing.JFrame {
         });
         jPanel1.add(Return_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_2.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -50, 180, 450));
+        Card_Icon_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, 80));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
+        Card_Icon_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, 80));
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 72, 420, 320));
+        Card_Icon_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, 80));
 
-        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        jLabel2.setText("Cards");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 150, 40));
+        Card_Icon_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, 80));
+
+        Card_Icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, 80));
+
+        Card_Icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/card(0).PNG"))); // NOI18N
+        jPanel1.add(Card_Icon_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, 80));
+
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jScrollPane1.setViewportView(jList1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 350, 330));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/game/images/FantasyTabletop_2.jpg"))); // NOI18N
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -158,38 +172,19 @@ public class SCREEN_Cards extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Add_Button;
+    private javax.swing.JLabel Background;
+    private javax.swing.JLabel Card_Icon_1;
+    private javax.swing.JLabel Card_Icon_2;
+    private javax.swing.JLabel Card_Icon_3;
+    private javax.swing.JLabel Card_Icon_4;
+    private javax.swing.JLabel Card_Icon_5;
+    private javax.swing.JLabel Card_Icon_6;
     private javax.swing.JButton Inspect_Button;
     private javax.swing.JButton Remove_Button;
     private javax.swing.JButton Return_Button;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-
-    private void customizeLayout() {
-        
-        
-        //customization of the layout
-         
-        cardList=Database.getInstance().getCardList();
-        System.out.println(cardList.size());
-        
-        String[]cardListTitles=new String[cardList.size()];
-        
-        for(int i=0;i<cardList.size();i++){
-            
-            cardListTitles[i]=cardList.get(i).getName();
-        }
-        
-        
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = cardListTitles;
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        
-        
-    }
 }

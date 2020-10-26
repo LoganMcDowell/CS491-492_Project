@@ -3,39 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package game.SCREENS;
 
-import game.Database;
-import game.Deck;
-import java.util.ArrayList;
-import javax.swing.AbstractListModel;
-import javax.swing.JOptionPane;
+/*
+2 formats possible for communication
+Either use stop and wait for info to pass between
+Or set class data info such as Database.defdeck1 = df1;
+*/
+package game.SCREENS;
+import game.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
 /**
  *
  * @author lmcdo
  */
 public class SCREEN_Decks extends javax.swing.JFrame {
 
+    public static Deck df1,df2,df3,df4,df5,cs1,cs2,cs3,cs4,cs5;
+    private static String [] custom_deck = {df1.getName(), df2.getName(), df3.getName(), df4.getName(), df5.getName()};
+    private static String [] default_deck = {cs1.getName(), cs2.getName(), cs3.getName(), cs4.getName(), cs5.getName()};
+
     /**
      * Creates new form Decks
      */
-    
-    private ArrayList<Deck>deckList=null;
-    private ArrayList<Deck>customDeckList=null;
-    
-    private int customSelectedIndex=-1;
-    
-    public SCREEN_Decks(ArrayList<Deck>deckList,ArrayList<Deck>customDeckList) {
-        
-        this.deckList=deckList;
-        this.customDeckList=customDeckList;
+    public SCREEN_Decks(Deck d1, Deck d2, Deck d3, Deck d4, Deck d5, Deck c1, Deck c2, Deck c3, Deck c4, Deck c5) {
         initComponents();
-        customizeInitializedComponents();
+        this.df1 = d1;this.df2 = d2;this.df3 = d3;this.df4 = d4;this.df5 = d5;
+        //add IF csi.equals(null)
+        this.cs1 = c1;this.cs2 = c2;this.cs3 = c3;this.cs4 = c4; this.cs5 = c5;
+        
+        Custom_List = new javax.swing.JList<>(custom_deck); 
+        Default_List = new javax.swing.JList<>(default_deck);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,9 +54,9 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         Return_Button = new javax.swing.JButton();
         Deck_Tab = new javax.swing.JTabbedPane();
         Custom_Tab = new javax.swing.JScrollPane();
-        Custom_List = new javax.swing.JList<>();
+        Custom_List = new javax.swing.JList<String>();
         Default_Tab = new javax.swing.JScrollPane();
-        Default_List = new javax.swing.JList<>();
+        Default_List = new javax.swing.JList<String>();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,7 +71,7 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         Text_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Text_1.setForeground(new java.awt.Color(51, 51, 51));
         Text_1.setText("Select a Deck");
-        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, 40));
+        jPanel1.add(Text_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 170, 40));
 
         Create_Button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Create_Button.setText("Create New");
@@ -111,10 +111,10 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
         Custom_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Custom_List.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        Custom_List.setModel(new javax.swing.AbstractListModel<String>() {
+        Custom_List.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Deck 1", "Deck 2", "Deck 3", "Deck 4", "Deck 5" };
             public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            public Object getElementAt(int i) { return strings[i]; }
         });
         Custom_List.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         Custom_Tab.setViewportView(Custom_List);
@@ -123,10 +123,10 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
         Default_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Default_List.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        Default_List.setModel(new javax.swing.AbstractListModel<String>() {
+        Default_List.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Default 1", "Default 2", "Default 3", "Default 4", "Default 5" };
             public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            public Object getElementAt(int i) { return strings[i]; }
         });
         Default_List.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         Default_Tab.setViewportView(Default_List);
@@ -156,46 +156,43 @@ public class SCREEN_Decks extends javax.swing.JFrame {
 
     private void Create_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Create_ButtonActionPerformed
         // TODO add your handling code here:
-        SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
-        dc.setVisible(true);
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
         dispose();
     }//GEN-LAST:event_Create_ButtonActionPerformed
 
     private void Return_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Return_ButtonActionPerformed
-        // TODO add your handling code here:
+        event_Listener();
         SCREEN_MainMenu mm = new SCREEN_MainMenu();
         mm.setVisible(true);
         dispose();
     }//GEN-LAST:event_Return_ButtonActionPerformed
 
     private void Edit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit_ButtonActionPerformed
-
-        
-        //check to ensure user has clicked an item in the list
-                if(customSelectedIndex>-1){
-                    SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
-                    dc.setVisible(true);
-                    dispose();
-                    
-                }else{
-                    JOptionPane.showMessageDialog(SCREEN_Decks.this, "You must select an item,or create one first");
-                }
-                    
+        //selectedDeck.edit()
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
+        dispose();
     }//GEN-LAST:event_Edit_ButtonActionPerformed
 
     private void Delete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Delete_ButtonActionPerformed
-        
-        //check to ensure user has clicked an item in the list
-                if(customSelectedIndex>-1){
-                    SCREEN_DeckView_C dc = new SCREEN_DeckView_C(customSelectedIndex);
-                    dc.setVisible(true);
-                    dispose();
-                    
-                }else{
-                    JOptionPane.showMessageDialog(SCREEN_Decks.this, "You must select an item,or create one first");
-                }
+        // TODO add your handling code here:
+        //selectedDeck.remove()
+        SCREEN_DeckView dv = new SCREEN_DeckView();
+        dv.setVisible(true);
+        dispose();
     }//GEN-LAST:event_Delete_ButtonActionPerformed
 
+    //listens on both tabs to record the selected deck
+    public void event_Listener(){
+        Custom_List.addListSelectionListener((ListSelectionEvent event) -> {
+            selectedItem = Custom_List.getSelectedValue();
+        });
+        
+        Default_List.addListSelectionListener((ListSelectionEvent event) -> {
+            selectedItem = Default_List.getSelectedValue();
+        });
+    }
     /**
      * @param args the command line arguments
      */
@@ -224,10 +221,11 @@ public class SCREEN_Decks extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SCREEN_Decks(Database.getInstance().getDeckList(),Database.getInstance().getCustomDeckList()).setVisible(true);
+                new SCREEN_Decks(df1, df2, df3, df4, df5, cs1, cs2, cs3, cs4, cs5).setVisible(true);
             }
         });
     }
@@ -247,50 +245,4 @@ public class SCREEN_Decks extends javax.swing.JFrame {
     private javax.swing.JLabel Title;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-
-    private void customizeInitializedComponents() {
-        
-        Default_List.setModel(new AbstractListModel<String>() {
-            
-            
-            @Override
-            public int getSize() {
-                return deckList.size();
-            }
-
-            @Override
-            public String getElementAt(int index) {
-                
-                 return deckList.get(index).getName();
-            }
-        });
-         Custom_List.setModel(new AbstractListModel<String>() {
-            
-            
-            @Override
-            public int getSize() {
-                return customDeckList.size();
-            }
-
-            @Override
-            public String getElementAt(int index) {
-                
-                 return customDeckList.get(index).getName();
-            }
-        });
-         
-         
-         //setListener on the customJlist
-         
-         Custom_List.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                customSelectedIndex=e.getFirstIndex();
-            }
-         });
-         
-         //end lister custom jlist
-        
-        
-    }
 }
